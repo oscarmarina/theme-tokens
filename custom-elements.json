@@ -1,0 +1,369 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "define/theme-tokens.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "declaration": {
+            "name": "ThemeTokens",
+            "module": "/src/ThemeTokens.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/ThemeTokens.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "ThemeTokens",
+          "members": [
+            {
+              "kind": "field",
+              "name": "is",
+              "static": true
+            },
+            {
+              "kind": "method",
+              "name": "finalizeStyles",
+              "static": true,
+              "parameters": [
+                {
+                  "name": "getStyles"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "_onClick"
+            },
+            {
+              "kind": "method",
+              "name": "sayHello",
+              "parameters": [
+                {
+                  "name": "heading",
+                  "description": "The heading to say \"Hello\" to",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ],
+              "description": "Formats a greeting",
+              "return": {
+                "type": {
+                  "text": "string"
+                }
+              }
+            },
+            {
+              "kind": "field",
+              "name": "heading",
+              "privacy": "public",
+              "description": "The heading to say \"Hello\" to.",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Hey there'",
+              "attribute": "heading"
+            },
+            {
+              "kind": "field",
+              "name": "counter",
+              "privacy": "public",
+              "description": "The number of times the button has been clicked.",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "attribute": "counter"
+            }
+          ],
+          "events": [
+            {
+              "name": "counter-changed",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "heading",
+              "description": "The heading to say \"Hello\" to.",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Hey there'",
+              "fieldName": "heading"
+            },
+            {
+              "name": "counter",
+              "description": "The number of times the button has been clicked.",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "fieldName": "counter"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ThemeTokens",
+          "declaration": {
+            "name": "ThemeTokens",
+            "module": "src/ThemeTokens.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/setDocumentStyles.js",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "adoptStyles",
+          "parameters": [
+            {
+              "name": "renderRoot"
+            },
+            {
+              "name": "styles"
+            }
+          ]
+        },
+        {
+          "kind": "function",
+          "name": "setDocumentStyles",
+          "parameters": [
+            {
+              "name": "styles"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "adoptStyles",
+          "declaration": {
+            "name": "adoptStyles",
+            "module": "src/setDocumentStyles.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "setDocumentStyles",
+          "declaration": {
+            "name": "setDocumentStyles",
+            "module": "src/setDocumentStyles.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/styles/ThemeTokens-styles.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "module": "src/styles/ThemeTokens-styles.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/theme/theme-base-common.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "tertiary0",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n  '--red-300': '#e57373',\n  '--red-400': '#ef5350',\n  '--red-500': '#f44336',\n  '--red-600': '#e53935',\n  '--red-700': '#c04545',\n}"
+        },
+        {
+          "kind": "variable",
+          "name": "tertiary1",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n  '--green-300': '#aed581',\n  '--green-400': '#9ccc65',\n  '--green-500': '#8bc34a',\n  '--green-600': '#7cb342',\n  '--green-700': '#689f38',\n}"
+        },
+        {
+          "kind": "variable",
+          "name": "tertiary2",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n  '--blue-300': '#0081f1',\n  '--blue-400': '#006adc',\n  '--blue-500': '#10243e',\n  '--blue-600': '#0f1b2d',\n  '--blue-700': '#0f1720',\n}"
+        },
+        {
+          "kind": "variable",
+          "name": "neutral",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n  '--neutral-300': '#fcfcfc',\n  '--neutral-400': '#ededed',\n  '--neutral-500': '#dbdbdb',\n  '--neutral-600': '#323232',\n  '--neutral-700': '#171717',\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "tertiary0",
+          "declaration": {
+            "name": "tertiary0",
+            "module": "src/theme/theme-base-common.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "tertiary1",
+          "declaration": {
+            "name": "tertiary1",
+            "module": "src/theme/theme-base-common.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "tertiary2",
+          "declaration": {
+            "name": "tertiary2",
+            "module": "src/theme/theme-base-common.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "neutral",
+          "declaration": {
+            "name": "neutral",
+            "module": "src/theme/theme-base-common.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/theme/theme-base.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "tertiary0",
+          "declaration": {
+            "name": "tertiary0",
+            "module": "./theme-base-common.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "tertiary1",
+          "declaration": {
+            "name": "tertiary1",
+            "module": "./theme-base-common.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "tertiary2",
+          "declaration": {
+            "name": "tertiary2",
+            "module": "./theme-base-common.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "neutral",
+          "declaration": {
+            "name": "neutral",
+            "module": "./theme-base-common.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/theme/theme-font-face.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "fontFace",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n  main: `\n  @font-face {\n    font-family: 'Kaisei HarunoUmi';\n    font-style: normal;\n    font-weight: 700;\n    font-display: swap;\n    src: url(https://fonts.gstatic.com/s/kaiseiharunoumi/v8/HI_WiZQSLqBQoAHhK_C6N_nzy_jcInfWlMIFxGC8ThDZtKQqORxzCer7-Vk2pnmh8MIy1A.118.woff2)\n      format('woff2');\n    unicode-range: U+21-22, U+27-2a, U+2c-3b, U+3f, U+41-4d, U+4f-5d, U+61-7b, U+7d, U+ab, U+ae,\n      U+b2-b3, U+b7, U+bb, U+c9, U+cd, U+d6, U+d8, U+dc, U+e0-e5, U+e7-ed, U+ef, U+f1-f4, U+f6, U+f8,\n      U+fa, U+fc-fd, U+103, U+14d, U+1b0, U+300-301, U+1ebf, U+1ec7, U+2013-2014, U+201c-201d,\n      U+2039-203a, U+203c, U+2048-2049, U+2113, U+2122, U+65e5, U+6708, U+70b9;\n  }\n  `,\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "fontFace",
+          "declaration": {
+            "name": "fontFace",
+            "module": "src/theme/theme-font-face.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/theme/theme.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "theme",
+          "type": {
+            "text": "object"
+          },
+          "default": "{\n  colors: {\n    ...tertiary0,\n    ...tertiary1,\n    ...tertiary2,\n    ...neutral,\n  },\n  fontFace: {\n    ...fontFace,\n  },\n  fonts: {\n    main: 'Kaisei HarunoUmi, serif',\n  },\n}"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "theme",
+          "declaration": {
+            "name": "theme",
+            "module": "src/theme/theme.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "ThemeTokens",
+          "declaration": {
+            "name": "ThemeTokens",
+            "module": "./src/ThemeTokens.js"
+          }
+        }
+      ]
+    }
+  ]
+}

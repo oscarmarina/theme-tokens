@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Demo theme-tokens</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background: #fafafa;
+      }
+      theme-tokens {
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo"></div>
+
+    <script type="module">
+      import { html, render } from 'lit';
+      import '../src/define/theme-tokens.js';
+
+      const heading = 'World!';
+      render(
+        html`<theme-tokens
+          @counter-changed="${ev => console.log('==>', ev.detail)}"
+          .heading=${heading}
+          >some <span>light-dom</span></theme-tokens
+        >`,
+        document.querySelector('#demo'),
+      );
+    </script>
+  </body>
+</html>

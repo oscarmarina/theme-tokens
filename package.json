@@ -1,0 +1,100 @@
+{
+  "name": "@blockquote/theme-tokens",
+  "version": "1.0.0-rc.1",
+  "description": "Webcomponent theme-tokens following open-wc recommendations",
+  "keywords": [
+    "lit",
+    "web-component",
+    "lit-element"
+  ],
+  "license": "MIT",
+  "author": "theme-tokens",
+  "main": "index.js",
+  "module": "index.js",
+  "files": [
+    "/define/",
+    "/src/",
+    "index.js",
+    "!/**/*.scss"
+  ],
+  "scripts": {
+    "analyze": "cem analyze --litelement --globs \"{src,define}/**/*.{js,ts}\" \"index.js\"",
+    "dev:vite": "vite build",
+    "format": "npm run format:eslint && npm run format:prettier && npm run format:stylelint",
+    "format:eslint": "eslint \"**/*.{js,ts,html}\" --fix --ignore-path .eslintignore",
+    "format:prettier": "prettier \"**/*.{js,ts,json,html,md}\" --write --ignore-path .eslintignore",
+    "format:stylelint": "stylelint \"**/*.{scss,css}\" --fix --allow-empty-input --ignore-path .eslintignore",
+    "postinstall": "npm run sort:package",
+    "lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:stylelint",
+    "lint:eslint": "eslint \"**/*.{js,ts,html}\" --ignore-path .eslintignore",
+    "lint:prettier": "prettier \"**/*.{js,ts,json,html,md}\" --check --ignore-path .eslintignore",
+    "lint:stylelint": "stylelint \"**/*.{scss,css}\" --allow-empty-input --ignore-path .eslintignore",
+    "preview:vite": "vite preview",
+    "sort:package": "npx sort-package-json",
+    "start": "npm run vite",
+    "vite": "vite"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "printWidth": 100,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "overrides": [
+      {
+        "files": "*.{scss,css}",
+        "options": {
+          "printWidth": 280,
+          "singleQuote": false
+        }
+      }
+    ]
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": "latest"
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "@open-wc",
+      "prettier",
+      "plugin:@typescript-eslint/recommended"
+    ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard-scss",
+    "rules": {
+      "custom-property-pattern": null,
+      "no-duplicate-selectors": null,
+      "color-function-notation": null,
+      "alpha-value-notation": null
+    }
+  },
+  "dependencies": {
+    "@blockquote-web-components/blockquote-base-style-helpers": "^1.4.0",
+    "lit": "^3.2.1"
+  },
+  "devDependencies": {
+    "@blockquote-web-components/blockquote-base-embedded-webview": "^1.12.0",
+    "@custom-elements-manifest/analyzer": "^0.10.3",
+    "@open-wc/eslint-config": "^12.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.13.0",
+    "@typescript-eslint/parser": "^8.13.0",
+    "@web/rollup-plugin-html": "^2.3.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-log-filenames": "^1.0.6",
+    "prettier": "^3.3.3",
+    "sort-package-json": "^2.10.1",
+    "stylelint": "^16.10.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "customElements": "custom-elements.json"
+}
